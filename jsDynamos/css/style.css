@@ -1,0 +1,449 @@
+/* Variables */
+:root {
+    --black: #0f0e0f;
+    --white: #FAF9F9;
+    --whitecast: #faf9f998; 
+    --brand-color: #7D3D3D;
+    --lightb-color:#DEABAB;
+    --accent-color:#896DA7;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --user-card-background: #312E2E26;
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url(/assets/fonts/BebasNeue/BebasNeue-Regular.otf);
+}
+
+@font-face {
+    font-family: BebasNeueBold;
+    src: url(/assets/fonts/BebasNeue/BebasNeue-Bold.otf);
+}
+/* Variables */
+
+
+
+/* CSS-reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* CSS-reset */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: BebasNeue,  Arial, Helvetica, sans-serif;
+    background: var(--accent-color);
+    background: linear-gradient(180deg,rgba(147, 125, 171, 1) 0%, rgba(164, 117, 137, 1) 14%, rgba(171, 108, 108, 1) 28%, rgba(178, 129, 129, 1) 44%, rgba(222, 171, 171, 1) 59%, rgba(147, 125, 171, 1) 73%, rgba(164, 117, 137, 1) 88%, rgba(125, 61, 61, 1) 100%);
+}
+
+h1 {
+    font-family: BebasNeue,  Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    color: var(--brand-color);
+    font-size: 48px;
+    line-height: 1;
+}
+
+h2 {
+    font-family: BebasNeue,  Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 1.067;
+}
+
+h3 {
+    font-family: BebasNeue,  Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 1.083;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:18px;
+    line-height: 1.5;
+}
+
+a {
+    font-weight: normal;
+    line-height: 1.5;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+header {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: var(--black);
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.logoImage {
+width: 25vh; 
+}
+
+.userVisual {
+    grid-row: 1;
+    grid-column: 1;
+    margin: 10px;
+}
+
+.userImg-container {
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    width: 61px;
+    height: 61px;
+}
+
+.userName {
+    margin-top: 5px;
+}
+
+.buttonContainer {
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.cardButton {
+    height: 19px;
+    width: 50px;
+    background-color: var(--brand-color);
+    border: none;
+    color: var(--white);
+    margin: 2px;
+    opacity: 1;
+    transition: opacity 0.3s ease, cursor 0.3s ease; 
+}
+
+.cardButton:hover {
+    opacity: 0.7; 
+    cursor: pointer; 
+}
+
+.userInfo {
+    grid-row: 2;
+    grid-column: 2;
+    background-color: var(--brand-color);
+    color: var(--white);
+    margin: 5px;
+}
+
+
+.userCard {
+    background-color: var(--user-card-background);
+    width: 473px;
+    min-height: 214px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr auto;
+    margin: 15px;
+    padding: 15px;
+}
+
+.userCard:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.userVisual {
+    grid-row: 1;
+    grid-column: 1;
+    margin: 10px;
+
+}
+.dot {
+    display: none;
+}
+
+.userImg-container {
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    width: 61px;
+    height: 61px;
+}
+
+.userName {
+    margin-top: 5px;
+}
+
+.onClickInfo {
+    grid-row: 1;
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.buttonContainer {
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 10px;
+}
+.cardButton {
+    height: 19px;
+    width: 50px;
+    background-color: var(--brand-color);
+    border: none;
+    color: var(--white);
+    margin: 2px;
+    opacity: 1;
+    transition: opacity 0.3s ease, cursor 0.3s ease; 
+}
+
+.cardButton:hover {
+    opacity: 0.7; 
+    cursor: pointer; 
+}
+
+.userInfo {
+    grid-row: 2;
+    grid-column: 1 / 3;
+    background-color: var(--brand-color);
+    color: var(--white);
+    padding: 5px;
+}
+
+.dropdownBox {
+    display: none;
+    position: static; 
+    width: 100%; 
+    max-width: 600px;
+    border: 1px solid var(--accent-color);
+    background-color: var(--lightb-color);
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 300px;
+    grid-row: 2;
+    grid-column: 1 / 4;
+}
+
+
+
+.post {
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.post h3 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--brand-color);
+}
+
+.post p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: var(--black);
+}
+
+
+footer {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1;
+    gap: 5px;
+    margin-top: 30px;
+    padding: 5vh;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}  
+
+footer h3 {
+    padding: 10px;
+    color: var(--white);
+    font-weight: normal;
+}
+
+footer i {
+    color: var(--brand-color);
+    text-shadow: 0 0 6px #000000, 0 0 5px #000000;
+    padding: 10px;
+}
+
+footer a {
+    color: var(--white);
+    font-size: 16px;
+    text-shadow: 0 0 1px #000000, 0 0 1px #000000;
+    padding-top: 15px;
+}
+
+footer a:hover {
+    color: var(--brand-color);
+    text-shadow: 0 0 6px #000000, 0 0 5px #000000;
+    font-size: 16px;
+}
+
+footer p {
+    font-size: 14px;
+    color: var(--white);
+    text-shadow: 0 0 6px #000000, 0 0 5px #000000;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 7vh;
+    margin-bottom: 10px;
+}
+
+.footerContainer i {
+    color: var(--accent-color);
+    text-shadow: 0 0 6px #000000, 0 0 5px #000000;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.footerContainer i:hover {
+    color: var(--white);
+    text-shadow: 0 0 6px var(--accent-color), 0 0 5px var(--brand-color);
+}
+
+.footerText  {
+    gap: 5px;
+    margin-bottom: 4vh;
+    font-size: 16px;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+
+    h1 {
+        font-size: 30px;
+        line-height: 1.067;
+    }
+    
+    h2 {
+        font-size: 26px;
+        line-height: 1.083;
+    }
+    
+    h3 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    header {
+        margin-bottom: 10px;
+    }
+
+    .logoImage {
+        padding: 2px;
+        width: 30%;
+    }
+  
+/* Mobile userCard */
+.userList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.userVisual{
+    display: flex;
+    align-items: baseline;
+}
+
+.dot {
+    display: block;
+}
+
+.userImg-container {
+    display: none;
+}
+.userCard {
+    min-height: 90px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.onClickInfo  {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.dropdownBox{
+    grid-row: 3 / 4;
+}
+/* /Mobile userCard */
+
+footer {
+        font-size: 16px;
+        gap: 5px;
+        margin-top: 10px;
+        padding: 3vh;
+    }  
+
+    footer i {
+        padding: 10px;
+    
+    }
+
+    footer a {
+        gap: 3px;
+    }
+
+    footer p {
+        font-size: 14px;
+        font-weight: 400;
+        padding-top: 15px;
+        gap: 3px;
+    }
+
+    .footerContainer {
+        display: flex;
+        color:var(--lightb-color);
+        flex-direction: row;
+        column-gap: 4vh;
+        row-gap: 4px;
+        margin-bottom: 1vh;
+    }
+
+
+    .footerContainer i {
+        font-size: 30px;
+    }
+
+    
+    .footerText  {
+        gap: 5px;
+        margin-bottom: 4vh;
+        font-size: 14px;
+    }
+}
+    
+
